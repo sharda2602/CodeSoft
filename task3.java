@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 class Student implements Serializable 
 {
-    private String nm;
-    private int rno; 
-    private String grd;
+    String nm, grd, gitMessage = "GitHub";
+    int rno; 
 
     public Student(String nm, int rno, String grd) 
     {
@@ -105,6 +104,8 @@ public class task3
         Scanner sc = new Scanner(System.in);
         StudentManagementSystem studentManagementSystem = new StudentManagementSystem();
         String fileName = "student_data.ser";
+
+        System.out.println(gitMessage);
 
         File file = new File(fileName); // Load data from file (if it exists)
         if (file.exists()) 
